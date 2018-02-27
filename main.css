@@ -1,5 +1,5 @@
 body{
-    background-color:black;
+    background-color:grey;
 }
 
 /* unvisited link */
@@ -22,4 +22,11 @@ a:hover {
 a:active {
     color: forestgreen;
     transform: scale(2);
+}
+
+.main{
+    display: block;
+    width: 70%;
+    margin: 25px 50px 75px 100px;
+    text-align: center;
 }

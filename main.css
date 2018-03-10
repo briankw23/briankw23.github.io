@@ -1,0 +1,33 @@
+body{
+    background-color:lightgrey;
+    color: white;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: orangered;
+    background-color:lightblue;
+}
+
+/* selected link */
+a:active {
+    color: forestgreen;
+    transform: scale(5);
+}
+
+.main{
+    display: block;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}

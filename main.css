@@ -1,5 +1,6 @@
 body{
-    background-color:grey;
+    background-color:lightgrey;
+    color: white;
 }
 
 /* unvisited link */
@@ -21,12 +22,12 @@ a:hover {
 /* selected link */
 a:active {
     color: forestgreen;
-    transform: scale(2);
+    transform: scale(5);
 }
 
 .main{
     display: block;
     width: 70%;
-    margin: 25px 50px 75px 100px;
+    margin: auto;
     text-align: center;
 }

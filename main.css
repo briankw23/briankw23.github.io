@@ -22,8 +22,6 @@ ul{
 }
 /*---------------> Base <------------------*/
 body{
-  margin: 0;
-  padding: 0;
   background: white;
 }
 a{
@@ -44,14 +42,11 @@ li a:hover {
     box-shadow: inset 0 0 0 25px green;
 }
 /* selected link */
-.main{
-    display: block;
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.blogPost{
+.post{
     border: solid green 2px;
     margin: 6px;
+    display:block;
+}
+.main{
+    text-align: center;
 }

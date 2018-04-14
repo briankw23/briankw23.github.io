@@ -1,24 +1,71 @@
-var projects =[
-    {id:"Project 1",title:"Title 1",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"},{id:"Project 2",title:"Title 2",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"},{id:"Project 3",title:"Title 3",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"},{id:"Project 4",title:"Title 4",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"},{id:"Project 5",title:"Title 5",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"},{id:"Project 6",title:"Title 6",imgurl:"<img src='spacex.jpg'>",description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",githuburl:"<a href='https://github.com/briankw23'><img src='github2.png'></a>"}
-    ];
-    
-    function createProjectCards(){
-        var projectstring =[];
-        for (var i = 0; i < projects.length; i++) {
-            projectstring.push(
-            "<div>" + projects[i].id + "</div>" +
-            "<h2>" + projects[i].title + "</h2>" +
-            "<div>" + projects[i].imgurl +"</div>" +
-            "<p>" + projects[i].description + "</p>"+
-            "<div>" + projects[i].githuburl + "</div>"
-            );
-        }
-        printToDom(projectstring,"prj");
-    };
-    function printToDom(string, divID){
-        var myDiv = document.getElementById(divID);
-        console.log("myDiv:", myDiv);
-        myDiv.innerHTML += string;
-      }
-    createProjectCards();
+const createProjectPost = (data) =>{
+    var blogstring ="";
+    for (var i = 0; i <data.projects.length; i++) {
+      blogstring +=`<div class="blogPost">`;
+      // blogstring +=`<div>${data.projects[i].id }</div>`;
+      blogstring +=`<h2 class="head">${data.projects[i].title}</h2>`;
+      blogstring +=`<p>${data.projects[i].imgurl}</p>`;
+      blogstring +=`<p>${data.projects[i].description}</p>`;
+      blogstring +=`${data.projects[i].githuburl}`;
+      blogstring +=`</div>`;
+    }
+    printToDom(blogstring, 'prj');
+  };
+  
+  const printToDom = (string, divID) => {
+    var myDiv = document.getElementById(divID);
+    console.log("myDiv:", myDiv);
+    myDiv.innerHTML += string;
+  };
+  const  executeThisCodeIfXHRFails = () => {
+    console.log("Error");
+  };
+  
+  function executeThisCodeAfterFileLoaded() {
+    const data = JSON.parse(this.responseText);
+   createProjectPost(data);
+  }
+  
+  const http = () => {
+    let myRequest = new XMLHttpRequest();
+    myRequest.addEventListener("load", executeThisCodeAfterFileLoaded);
+    myRequest.addEventListener("error", executeThisCodeIfXHRFails);
+    myRequest.open("GET", "projects.json");
+    myRequest.send();
+  };
+  
+  const startApplication = () => {
+    http();
+  };
+  
+  startApplication();
+
+
+
+
+
+
+
+
+
+
+// function createProjectCards(){
+// var projectstring =[];
+// for (var i = 0; i < projects.length; i++) {
+// projectstring.push(
+// "<div>" + projects[i].id + "</div>" +
+// "<h2>" + projects[i].title + "</h2>" +
+// "<div>" + projects[i].imgurl +"</div>" +
+// "<p>" + projects[i].description + "</p>"+
+// "<div>" + projects[i].githuburl + "</div>"
+// );
+// }
+// printToDom(projectstring,"prj");
+// };
+// function printToDom(string, divID){
+// var myDiv = document.getElementById(divID);
+// console.log("myDiv:", myDiv);
+// myDiv.innerHTML += string;
+// }
+// createProjectCards();
     

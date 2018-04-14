@@ -44,32 +44,4 @@ const createProjectPost = (data) =>{
   
   startApplication();
 
-
-
-
-
-
-
-
-
-
-// function createProjectCards(){
-// var projectstring =[];
-// for (var i = 0; i < projects.length; i++) {
-// projectstring.push(
-// "<div>" + projects[i].id + "</div>" +
-// "<h2>" + projects[i].title + "</h2>" +
-// "<div>" + projects[i].imgurl +"</div>" +
-// "<p>" + projects[i].description + "</p>"+
-// "<div>" + projects[i].githuburl + "</div>"
-// );
-// }
-// printToDom(projectstring,"prj");
-// };
-// function printToDom(string, divID){
-// var myDiv = document.getElementById(divID);
-// console.log("myDiv:", myDiv);
-// myDiv.innerHTML += string;
-// }
-// createProjectCards();
     

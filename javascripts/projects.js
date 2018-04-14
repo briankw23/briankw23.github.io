@@ -1,12 +1,16 @@
 const createProjectPost = (data) =>{
     var blogstring ="";
     for (var i = 0; i <data.projects.length; i++) {
-      blogstring +=`<div class="blogPost">`;
+      blogstring +=`<div class="row post">`;
+      blogstring +=`<div class="col-md-2"></div>`;
+      blogstring +=`<div class="col-md-8">`;
       // blogstring +=`<div>${data.projects[i].id }</div>`;
-      blogstring +=`<h2 class="head">${data.projects[i].title}</h2>`;
+      blogstring +=`<h2>${data.projects[i].title}</h2>`;
       blogstring +=`<p>${data.projects[i].imgurl}</p>`;
       blogstring +=`<p>${data.projects[i].description}</p>`;
       blogstring +=`${data.projects[i].githuburl}`;
+      blogstring +=`</div>`;
+      blogstring +=`<div class="col-md-2"></div>`;
       blogstring +=`</div>`;
     }
     printToDom(blogstring, 'prj');

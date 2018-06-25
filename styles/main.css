@@ -1,0 +1,35 @@
+body {
+  background-color: #ff9021;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#left-sec {
+  height: 50%;
+}
+#right-sec {
+  height: 50%;
+}
+#bigWords{
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  color: black;
+  text-align: right;
+}
+#name{
+  border-bottom: black;
+}
+#para {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+#projects {
+  height: 25%;
+  background-color: aqua;
+}
+#blogs{
+  height: 25%;
+  background-color: navajowhite;
+}

@@ -33,3 +33,8 @@ footer {
   height: 25%;
   background-color: navajowhite;
 }
+#portfolioBtn, #blogsBtn, #contactBtn {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2em;
+  color: black;
+}

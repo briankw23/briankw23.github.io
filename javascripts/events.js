@@ -13,8 +13,22 @@ const showProjects = (e) => {
   });
 };
 
+const showBlogs = (e) => {
+  $(document).on('click', '.blogs', (e) => {
+    firebaseApi.getBlogs()
+      .then((results) => {
+        console.log(results);
+
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+};
+
 const initializer = () => {
   showProjects();
+  showBlogs();
 };
 
 module.exports = {

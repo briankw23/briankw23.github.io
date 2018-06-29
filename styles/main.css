@@ -1,5 +1,6 @@
 body {
-  background-color: #ff9021;
+  background: url(https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center fixed;
+  background-size:cover;                      /* <------ */
 }
 footer {
   position: absolute;
@@ -7,7 +8,14 @@ footer {
   width: 100%;
 }
 #nav {
-  background-color: #0a5e77;
+  background-color: transparent;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: transparent;
 }
 #bigWords{
   font-family: 'Russo One', sans-serif;
@@ -23,19 +31,19 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 #projects {
-  background-color:  indianred;;
+  background-color:maroon;
 }
 #blogs{
   background-color: navajowhite;
 }
-#portfolioBtn, #blogsBtn, #contactBtn {
-  font-family: 'Russo One', sans-serif;
-  font-size: 2em;
+#portfolioBtn, #blogsBtn, #contactBtn, #techBtn {
+  font-size: 3em;
   color:white;
+  font-family: 'Amatic SC', cursive;
 }
 #nameButton {
-  font-family: 'Monoton', cursive;
-  font-size: 2em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
   color:white;
 }
 .projectContent {

@@ -6,11 +6,8 @@ footer {
   bottom: 0;
   width: 100%;
 }
-#left-sec {
-  height: 50%;
-}
-#right-sec {
-  height: 50%;
+#nav {
+  background-color: #0a5e77;
 }
 #bigWords{
   font-family: 'Russo One', sans-serif;
@@ -26,15 +23,21 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 #projects {
-  height: 25%;
-  background-color: aqua;
+  background-color:  indianred;;
 }
 #blogs{
-  height: 25%;
   background-color: navajowhite;
 }
 #portfolioBtn, #blogsBtn, #contactBtn {
   font-family: 'Russo One', sans-serif;
   font-size: 2em;
-  color: black;
+  color:white;
+}
+#nameButton {
+  font-family: 'Monoton', cursive;
+  font-size: 2em;
+  color:white;
+}
+.projectContent {
+  margin: 5px;
 }

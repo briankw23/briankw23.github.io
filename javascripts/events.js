@@ -3,7 +3,9 @@ const dom = require('./dom');
 
 const showProjects = (e) => {
   $(document).on('click', '.portfolio', (e) => {
-    // $('#projects').removeClass('hide');
+    $('#projects').removeClass('hide');
+    $('#middle').addClass('hide');
+    $('#blogs').addClass('hide');
     firebaseApi.getProjects()
       .then((results) => {
         console.log(results);
@@ -17,7 +19,9 @@ const showProjects = (e) => {
 
 const showBlogs = (e) => {
   $(document).on('click', '.blogs', (e) => {
-    // $('#blogs').removeClass('hide');
+    $('#blogs').removeClass('hide');
+    $('#middle').addClass('hide');
+    $('#projects').addClass('hide');
     firebaseApi.getBlogs()
       .then((results) => {
         console.log(results);
@@ -31,15 +35,14 @@ const showBlogs = (e) => {
 
 const showContact = (e) => {
   $(document).on('click', '.contact', (e) => {
-    let strang = '';
-    strang += 'contact info should print here';
-    $('#contact').html(strang);
+    const email = 'briankw23@gmail.com';
+    $('#contactBtn').html(email);
   });
 };
 
-const showRefresh = () => {
-  $(document).on('click', '.home', (e) => {
-    document.reload();
+const homeRefresh = () => {
+  $(document).on('click', '#home', (e) => {
+    location.reload();
   });
 };
 
@@ -47,7 +50,7 @@ const initializer = () => {
   showProjects();
   showBlogs();
   showContact();
-  showRefresh();
+  homeRefresh();
 };
 
 module.exports = {

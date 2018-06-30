@@ -31,9 +31,8 @@ const showBlogs = (e) => {
 
 const showContact = (e) => {
   $(document).on('click', '.contact', (e) => {
-    let strang = '';
-    strang += 'contact info should print here';
-    $('#contact').html(strang);
+    const email = 'briankw23@gmail.com';
+    $('#contactBtn').html(email);
   });
 };
 

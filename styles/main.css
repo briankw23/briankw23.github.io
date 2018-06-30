@@ -99,3 +99,13 @@ text-align: center;
   color: white;
   font-family: 'Fjalla One', sans-serif;
 }
+#resumeSec {
+  display: block;
+  margin-top: 20px;
+}
+#mockResume {
+display: block;
+height: 600px;
+margin: auto;
+width: 50%;
+}

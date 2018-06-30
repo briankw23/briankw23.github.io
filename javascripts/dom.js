@@ -15,27 +15,16 @@ const projectStringBuilder = (projectArray) => {
 };
 
 const blogStringBuilder = (blogArray) => {
-  let leftstrang = '';
-  let rightStrang = '';
+  let strang = '';
   for (let i = 0; i < blogArray.length; i++) {
-    if (i % 2 === 0) {
-      leftstrang += `<div class="panel panel-default col-xs-12 col-sm-12">`;
-      leftstrang +=  `<div class="panel-body rightBlog">`;
-      leftstrang +=    `<h2>${blogArray[i].title}</h2>`;
-      leftstrang +=    `<p>${blogArray[i].post}</p>`;
-      leftstrang +=  `</div>`;
-      leftstrang += `</div>`;
-    } else {
-      rightStrang += `<div class="panel panel-default col-xs-12 col-sm-12">`;
-      rightStrang +=  `<div class="panel-body leftBlog">`;
-      rightStrang +=   `<h2>${blogArray[i].title}</h2>`;
-      rightStrang +=   `<p>${blogArray[i].post}</p>`;
-      rightStrang +=  `</div>`;
-      rightStrang += `</div>`;
-    }
+    strang += `<div class="panel panel-default col-sm-16 blogContent">`;
+    strang +=  `<div class="panel-body">`;
+    strang +=    `<h2>${blogArray[i].title}</h2>`;
+    strang +=    `<p>${blogArray[i].post}</p>`;
+    strang +=  `</div>`;
+    strang += `</div>`;
   }
-  printToDom(leftstrang,'#blogLeft');
-  printToDom(rightStrang,'#blogRight');
+  printToDom(strang,'#blogs');
 };
 
 const printToDom = (string, whereToPrint) => {

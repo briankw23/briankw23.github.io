@@ -40,9 +40,9 @@ const showContact = (e) => {
   });
 };
 
-const showRefresh = () => {
-  $(document).on('click', '.home', (e) => {
-    document.reload();
+const homeRefresh = () => {
+  $(document).on('click', '#home', (e) => {
+    location.reload();
   });
 };
 
@@ -50,7 +50,7 @@ const initializer = () => {
   showProjects();
   showBlogs();
   showContact();
-  showRefresh();
+  homeRefresh();
 };
 
 module.exports = {

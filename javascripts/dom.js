@@ -2,10 +2,12 @@ const projectStringBuilder = (projectArray) => {
   console.log(projectArray);
   let strang = '';
   for (let i = 0; i < projectArray.length; i++) {
-    strang += `<div class="panel panel-default col-xs-4 col-sm-3 projectContent">`;
+    strang += `<div class="col-sm-4">`;
+    strang += `<div class="panel panel-default projectContent">`;
     strang += `<div class="panel-body">`;
     strang +=  `<h3>${projectArray[i].title}</h3>`;
     strang += `<p>${projectArray[i].description}</p>`;
+    strang += `</div>`;
     strang += `</div>`;
     strang += `</div>`;
   }

@@ -11,7 +11,7 @@ footer {
   background-color: transparent;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 3%;
+  margin-top: 1.7%;
 }
 .navbar-default {
   background-color: #f8f8f8;
@@ -31,21 +31,57 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 #projects {
-  background-color:maroon;
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
 }
 #blogs{
-  background-color: navajowhite;
+  /* background-color: navajowhite; */
 }
-#portfolioBtn, #blogsBtn, #contactBtn, #techBtn {
-  font-size: 3em;
+#portfolioBtn, #blogsBtn, #contactBtn{
+  font-size: 2.5em;
   color:white;
-  font-family: 'Amatic SC', cursive;
-}
-#nameButton {
-  font-family: 'Amatic SC', cursive;
-  font-size: 4em;
-  color:white;
+  font-family: 'Fjalla One', sans-serif;
 }
 .projectContent {
   margin: 5px;
+}
+#logo {
+  display: block;
+  height: 60px;
+}
+#title {
+  display: block;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#myName {
+  font-size: 3.5em;
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+}
+#ex {
+  font-size: 2em;
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+}
+#techBtn {
+  display: block;
+  font-size: 2em;
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+  margin: auto;
+  width: 50%
+}
+.navbar-right {
+text-align: center;
+}
+#techSec {
+  display: block;
+  width: 50%;
+  margin: auto;
+  text-align: center;
 }

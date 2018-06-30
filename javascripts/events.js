@@ -3,7 +3,9 @@ const dom = require('./dom');
 
 const showProjects = (e) => {
   $(document).on('click', '.portfolio', (e) => {
-    // $('#projects').removeClass('hide');
+    $('#projects').removeClass('hide');
+    $('#middle').addClass('hide');
+    $('#blogs').addClass('hide');
     firebaseApi.getProjects()
       .then((results) => {
         console.log(results);
@@ -17,7 +19,9 @@ const showProjects = (e) => {
 
 const showBlogs = (e) => {
   $(document).on('click', '.blogs', (e) => {
-    // $('#blogs').removeClass('hide');
+    $('#blogs').removeClass('hide');
+    $('#middle').addClass('hide');
+    $('#projects').addClass('hide');
     firebaseApi.getBlogs()
       .then((results) => {
         console.log(results);

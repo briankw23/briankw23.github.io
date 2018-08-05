@@ -115,3 +115,18 @@ width: 50%;
 #main, #content {
   margin-bottom: 20px;
 }
+
+.projectLogo {
+  height: 100px;
+  width: 100px;
+}
+
+.gitLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.linkLogo {
+  height: 40px;
+  width: 40px;
+}

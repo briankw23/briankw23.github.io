@@ -41,7 +41,7 @@ const showContact = (e) => {
 };
 
 const homeRefresh = () => {
-  $(document).on('click', '#home', (e) => {
+  $(document).on('click', '#brianLogo', (e) => {
     location.reload();
   });
 };
